@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "es5",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "declaration": true
+    },
+    "files": [
+        "angular2-esri-loader.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

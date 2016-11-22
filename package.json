@@ -1,0 +1,36 @@
+{
+  "name": "angular2-esri-loader",
+  "version": "0.1.0",
+  "description": "An Angular 2 service to help you load ArcGIS API for JavaScript Modules",
+  "scripts": {
+    "test": "tsc",
+    "prepublish": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomwayson/angular2-esri-loader.git"
+  },
+  "keywords": [
+    "Angular2",
+    "Esri",
+    "ArcGIS"
+  ],
+  "author": "Tom Wayson <tom@tomwayson.com> (https://tomwayson.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/tomwayson/angular2-esri-loader/issues"
+  },
+  "homepage": "https://github.com/tomwayson/angular2-esri-loader#readme",
+  "dependencies": {
+    "@angular/core": "^2.2.1",
+    "esri-loader": "^0.1.0",
+    "rxjs": "^5.0.0-rc.4",
+    "zone.js": "^0.7.0"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.34",
+    "typescript": "^2.0.10"
+  },
+  "typings": "angular2-esri-loader.d.ts",
+  "main": "angular2-esri-loader.ts"
+}
