@@ -1,6 +1,11 @@
 # angular2-esri-loader
 An Angular 2 service to help you load [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/) Modules
 
+## Install
+```bash
+npm install angular2-esri-loader esri-loader
+```
+
 ## Usage
 Example of using the loader service in a resolver to lazy load the ArcGIS API and 
 
@@ -8,7 +13,7 @@ Example of using the loader service in a resolver to lazy load the ArcGIS API an
 import { Injectable } from '@angular/core';
 import { Resolve } from '@angular/router';
 
-import { EsriLoaderService } from 'angular2-esri-loader/angular2-esri-loader';
+import { EsriLoaderService } from 'angular2-esri-loader';
 
 @Injectable()
 export class EsriMapResolveService implements Resolve<any> {

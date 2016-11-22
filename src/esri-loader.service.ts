@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-// TODO: why doesn't this work?
 import { isLoaded, bootstrap, dojoRequire } from 'esri-loader';
-// import { isLoaded, bootstrap, dojoRequire } from '../../node_modules/esri-loader/src/index';
 
 @Injectable()
 export class EsriLoaderService {
