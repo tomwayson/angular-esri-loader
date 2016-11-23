@@ -1,6 +1,6 @@
 {
   "name": "angular2-esri-loader",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "An Angular 2 service to help you load ArcGIS API for JavaScript Modules",
   "scripts": {
     "test": "tsc",
