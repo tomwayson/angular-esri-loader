@@ -53,7 +53,7 @@ For an example of how to use this service to lazy load the ArcGIS API and resolv
 
 ## Examples
 This service is in use in these applications:
-- [esri-angular-cli-example]((https://github.com/tomwayson/esri-angular-cli-example)
+- [esri-angular-cli-example](https://github.com/tomwayson/esri-angular-cli-example)
 
 ## Resources
 * [Using the ArcGIS API for JavaScript in Applications built with webpack](http://tomwayson.com/2016/11/27/using-the-arcgis-api-for-javascript-in-applications-built-with-webpack/)
