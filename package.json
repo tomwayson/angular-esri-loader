@@ -30,6 +30,5 @@
   "devDependencies": {
     "typescript": "^2.0.10"
   },
-  "typings": "index.d.ts",
-  "main": "index.ts"
+  "typings": "index.d.ts"
 }
