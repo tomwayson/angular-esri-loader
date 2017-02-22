@@ -51,6 +51,17 @@ export class EsriMapComponent implements OnInit {
 For an example of how to use this service to lazy load the ArcGIS API and resolve modules in a route, see 
 [esri-angular-cli-example's esri-map-resolve.service.ts](https://github.com/tomwayson/esri-angular-cli-example/blob/ab4540912904cf78ccfd904fb3bfa4c69b4aa1da/src/app/esri-map/esri-map-resolve.service.ts).
 
+## ArcGIS Types
+This service doesn't make any assumptions about which version of the ArcGIS API you are using, so you will have to manually install the appropriate types.
+
+### 4.x Types
+Follow [these instructions](https://github.com/Esri/jsapi-resources/tree/master/4.x/typescript) to install the 4.x types.
+
+Then you can use the `__esri` namespace for the types as seen in [this example](https://github.com/kgs916/angular2-esri4-components/blob/68861b286fd3a4814c495c2bd723e336e917ced2/src/lib/esri4-map/esri4-map.component.ts#L20-L26).
+
+### 3.x Types
+Unfortunately the `__esri` namespace is not defined for 3.x types. You can use [these instructions](https://github.com/Esri/jsapi-resources/tree/master/3.x/typescript) to install the 3.x types, but then [you will still need to use `import` statements to get the types](https://github.com/Esri/jsapi-resources/issues/60). This may cause build errors that may or may not result in actual runtime errors depending on your environment.
+
 ## Examples
 This service is in use in these applications:
 - [esri-angular-cli-example](https://github.com/tomwayson/esri-angular-cli-example)
