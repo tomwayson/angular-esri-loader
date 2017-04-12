@@ -5,7 +5,7 @@ Exposes a service that wraps the functions from the [esri-loader](https://github
 
 ## Install
 ```bash
-npm install angular2-esri-loader esri-loader
+npm install --save angular2-esri-loader esri-loader
 ```
 
 ## Usage
