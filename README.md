@@ -1,5 +1,5 @@
 # angular2-esri-loader
-An [Angular 2](https://angular.io/) service to help you load [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/) modules. 
+An [Angular](https://angular.io/) library to help you load [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/) modules. 
 
 Exposes a service that wraps the functions from the [esri-loader](https://github.com/tomwayson/esri-loader) library in new functions that return promises. 
 
@@ -48,8 +48,16 @@ export class EsriMapComponent implements OnInit {
 }
 ```
 
+### In an Angular CLI Application
+
+To use this library in an [Angular CLI](https://github.com/angular/angular-cli) application, the best place to start is to follow the instructions in [this gist](https://gist.github.com/tomwayson/e6260adfd56c2529313936528b8adacd).
+
 For an example of how to use this service to lazy load the ArcGIS API and resolve modules in a route, see 
 [esri-angular-cli-example's esri-map-resolve.service.ts](https://github.com/tomwayson/esri-angular-cli-example/blob/ab4540912904cf78ccfd904fb3bfa4c69b4aa1da/src/app/esri-map/esri-map-resolve.service.ts).
+
+### In an angular2-webpack-starter Application
+
+See [this gist](https://gist.github.com/jwasilgeo/00855ee002aca822e33abd8a7a031f56) for instructions on how to use this library in an [AngularClass/angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter) application.
 
 ## ArcGIS Types
 This service doesn't make any assumptions about which version of the ArcGIS API you are using, so you will have to manually install the appropriate types.
