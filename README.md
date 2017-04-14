@@ -1,7 +1,9 @@
 # angular2-esri-loader
 An [Angular](https://angular.io/) library to help you load [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/) modules. 
 
-Exposes a service that wraps the functions from the [esri-loader](https://github.com/tomwayson/esri-loader) library in new functions that return promises. 
+Exposes a service that wraps the functions from the [esri-loader](https://github.com/tomwayson/esri-loader) library in new functions that return promises.
+
+To understand why this is needed, and the benefits of using esri-loader over other techniques, see the [esri-loader README](https://github.com/tomwayson/esri-loader#why-is-this-needed).
 
 ## Install
 ```bash
@@ -65,7 +67,7 @@ This service doesn't make any assumptions about which version of the ArcGIS API 
 ### 4.x Types
 Follow [these instructions](https://github.com/Esri/jsapi-resources/tree/master/4.x/typescript) to install the 4.x types.
 
-For Angular CLI applications, you will also need to add "arcgis-js-api" to compilerOptions.types in src/tsconfig.app.json and src/tsconfig.spec.json [as shown here](https://gist.github.com/tomwayson/e6260adfd56c2529313936528b8adacd#adding-the-arcgis-api-for-javascript-types).
+For Angular CLI applications, you will also need to add "arcgis-js-api" to `compilerOptions.types` in src/tsconfig.app.json and src/tsconfig.spec.json [as shown here](https://gist.github.com/tomwayson/e6260adfd56c2529313936528b8adacd#adding-the-arcgis-api-for-javascript-types).
 
 Then you can use the `__esri` namespace for the types as seen in [this example](https://github.com/kgs916/angular2-esri4-components/blob/68861b286fd3a4814c495c2bd723e336e917ced2/src/lib/esri4-map/esri4-map.component.ts#L20-L26).
 
