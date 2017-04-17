@@ -1,21 +1,32 @@
 {
     "compilerOptions": {
-        "noImplicitAny": false,
-        "module": "commonjs",
-        "target": "es5",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "sourceMap": true,
+        "baseUrl": "./src",
         "declaration": true,
+        "experimentalDecorators": true,
+        "inlineSources": true,
         "lib": [
             "es2015",
             "dom"
-        ]
+        ],
+        "module": "es2015",        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "outDir": "./build",
+        "rootDir": "./src",
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "stripInternal": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "target": "es5",
+        "types": []
     },
     "files": [
-        "index.ts"
+        "./src/index.ts"
     ],
-    "exclude": [
-        "node_modules"
-    ]
+    "angularCompilerOptions": {
+        "annotateForClosureCompiler": true,
+        "strictMetadataEmit": true,
+        "skipTemplateCodegen": true,
+        "flatModuleOutFile": "angular2-esri-loader.js",
+        "flatModuleId": "angular2-esri-loader"
+    }
 }

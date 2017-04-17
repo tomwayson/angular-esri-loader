@@ -1,17 +1,22 @@
 {
   "name": "angular2-esri-loader",
   "version": "0.1.11",
-  "description": "An Angular 2 service to help you load ArcGIS API for JavaScript Modules",
+  "description": "An Angular (2+) service to help you load ArcGIS API for JavaScript Modules",
   "scripts": {
-    "test": "tsc",
-    "prepublish": "tsc"
+    "build": "npm run clean && npm run ngc && npm run rollup && npm run copy",
+    "clean": "rm -rf build dist",
+    "copy": "rsync -a --exclude=*.js build/ dist && cp src/package.json dist/package.json && cp README.md dist/README.md",
+    "ngc": "ngc -p tsconfig.json",
+    "rollup": "rollup build/angular2-esri-loader.js -o dist/angular2-esri-loader.js",
+    "prepublish": "npm run build",
+    "test": "ngc"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tomwayson/angular2-esri-loader.git"
   },
   "keywords": [
-    "Angular2",
+    "Angular",
     "Esri",
     "ArcGIS"
   ],
@@ -21,14 +26,15 @@
     "url": "https://github.com/tomwayson/angular2-esri-loader/issues"
   },
   "homepage": "https://github.com/tomwayson/angular2-esri-loader#readme",
-  "dependencies": {
-    "@angular/core": "^2.1.0",
-    "esri-loader": "^0.1.2",
-    "rxjs": "5.0.0-beta.12",
-    "zone.js": "^0.6.23"
-  },
   "devDependencies": {
-    "typescript": "^2.0.10"
+    "@angular/compiler": "^4.0.2",
+    "@angular/compiler-cli": "^4.0.2",
+    "@angular/core": "^4.0.2",
+    "esri-loader": "^0.3.1",
+    "rollup": "^0.41.6",
+    "rxjs": "^5.3.0",
+    "typescript": "^2.0.10",
+    "zone.js": "^0.8.5"
   },
   "typings": "index.d.ts"
 }
