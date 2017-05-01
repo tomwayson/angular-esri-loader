@@ -1,10 +1,11 @@
 {
   "name": "angular2-esri-loader",
-  "version": "0.1.11",
+  "version": "1.0.0",
   "description": "An Angular 2 service to help you load ArcGIS API for JavaScript Modules",
   "scripts": {
     "test": "tsc",
-    "prepublish": "tsc"
+    "prepublish": "tsc",
+    "preversion": "npm run test && git add README.md CHANGELOG.md"
   },
   "repository": {
     "type": "git",
