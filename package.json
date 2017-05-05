@@ -1,6 +1,6 @@
 {
   "name": "angular2-esri-loader",
-  "version": "0.1.11",
+  "version": "1.0.0",
   "description": "An Angular (2+) service to help you load ArcGIS API for JavaScript Modules",
   "scripts": {
     "build": "npm run clean && npm run ngc && npm run rollup && npm run copy",
@@ -9,6 +9,7 @@
     "ngc": "ngc -p tsconfig.json",
     "rollup": "rollup build/angular2-esri-loader.js -o dist/angular2-esri-loader.js",
     "prepublish": "npm run build",
+    "preversion": "npm run test && git add README.md CHANGELOG.md",
     "test": "ngc"
   },
   "repository": {
@@ -27,11 +28,11 @@
   },
   "homepage": "https://github.com/tomwayson/angular2-esri-loader#readme",
   "devDependencies": {
-    "@angular/compiler": "^4.0.2",
-    "@angular/compiler-cli": "^4.0.2",
-    "@angular/core": "^4.0.2",
+    "@angular/compiler": "^4.1.1",
+    "@angular/compiler-cli": "^4.1.1",
+    "@angular/core": "^4.1.1",
     "copyfiles": "^1.2.0",
-    "esri-loader": "^0.3.1",
+    "esri-loader": "^1.0.0",
     "rimraf": "^2.6.1",
     "rollup": "^0.41.6",
     "rxjs": "^5.3.0",

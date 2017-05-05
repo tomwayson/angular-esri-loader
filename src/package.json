@@ -17,9 +17,11 @@
     "url": "https://github.com/tomwayson/angular2-esri-loader/issues"
   },
   "homepage": "https://github.com/tomwayson/angular2-esri-loader#readme",
+  "dependencies": {
+    "esri-loader": "^1.0.0"
+  },
   "peerDependencies": {
-    "@angular/core": "^4.0.1",
-    "esri-loader": "^0.3.1",
+    "@angular/core": "^4.1.1",
     "rxjs": "^5.3.0",
     "zone.js": "^0.8.5"
   },
