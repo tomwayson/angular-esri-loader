@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npm run clean && npm run ngc && npm run rollup && npm run copy",
     "clean": "rimraf build dist",
-    "copy": "copyfiles -e '*.js' 'build/**/*' dist && copyfiles -f src/package.json README.md dist",
+    "copy": "copyfiles -u 1 -e *.js build/**/* dist && copyfiles -f src/package.json README.md dist",
     "ngc": "ngc -p tsconfig.json",
     "rollup": "rollup build/angular2-esri-loader.js -o dist/angular2-esri-loader.js",
     "prepublish": "npm run build",
