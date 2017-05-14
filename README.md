@@ -1,4 +1,4 @@
-# angular2-esri-loader
+# angular-esri-loader
 An [Angular](https://angular.io/) library to help you load [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/) modules. 
 
 Exposes a service that wraps the functions from the [esri-loader](https://github.com/tomwayson/esri-loader) library in new functions that return promises.
@@ -6,9 +6,19 @@ Exposes a service that wraps the functions from the [esri-loader](https://github
 To understand why this is needed, and the benefits of using esri-loader over other techniques, see the [esri-loader README](https://github.com/tomwayson/esri-loader#why-is-this-needed).
 
 ## Install
+For Angular 4 and above:
+
+```bash
+npm install angular-esri-loader
+```
+
+For Angular 2:
+
 ```bash
 npm install angular2-esri-loader esri-loader
 ```
+
+**NOTE**: for Angular.js use [angular-esri-map](https://github.com/Esri/angular-esri-map).
 
 ## Usage
 Example of using the loader service in a component to lazy load the ArcGIS API and create a map
@@ -16,7 +26,7 @@ Example of using the loader service in a component to lazy load the ArcGIS API a
 ```ts
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
-import { EsriLoaderService } from 'angular2-esri-loader';
+import { EsriLoaderService } from 'angular-esri-loader';
 
 @Component({
   selector: 'app-esri-map',
