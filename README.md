@@ -18,14 +18,40 @@ For Angular 2:
 npm install angular2-esri-loader esri-loader
 ```
 
-**NOTE**: for Angular.js use [angular-esri-map](https://github.com/Esri/angular-esri-map).
+**NOTE**: for AngularJS use [angular-esri-map](https://github.com/Esri/angular-esri-map).
 
 ## Usage
-Example of using the loader service in a component to lazy load the ArcGIS API and create a map
+
+Below is an example of using the loader service in a component to lazy load the ArcGIS API and create a map.
+
+First you need to import the `EsriLoaderModule` into your application:
+
+```ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { EsriLoaderModule } from 'angular-esri-loader';
+
+import { AppComponent } from './app.component';
+import { EsriMapComponent } from './esri-map.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    EsriMapComponent
+  ],
+  imports: [
+    BrowserModule,
+    EsriLoaderModule,
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+Then you can use the `EsriLoaderService` in a component to load a map:
 
 ```ts
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-
 import { EsriLoaderService } from 'angular-esri-loader';
 
 @Component({
