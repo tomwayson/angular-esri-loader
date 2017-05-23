@@ -1,7 +1,7 @@
 {
   "name": "angular-esri-loader",
-  "version": "1.0.0",
-  "description": "An Angular (2+) service to help you load ArcGIS API for JavaScript Modules",
+  "version": "1.1.0",
+  "description": "An Angular service to help you load ArcGIS API for JavaScript Modules",
   "scripts": {
     "build": "npm run clean && npm run ngc && npm run rollup && npm run copy",
     "clean": "rimraf build dist",
