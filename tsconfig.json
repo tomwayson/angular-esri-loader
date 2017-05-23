@@ -26,7 +26,7 @@
         "annotateForClosureCompiler": true,
         "strictMetadataEmit": true,
         "skipTemplateCodegen": true,
-        "flatModuleOutFile": "angular2-esri-loader.js",
-        "flatModuleId": "angular2-esri-loader"
+        "flatModuleOutFile": "angular-esri-loader.js",
+        "flatModuleId": "angular-esri-loader"
     }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "angular2-esri-loader",
+  "name": "angular-esri-loader",
   "version": "1.0.0",
   "description": "An Angular (2+) service to help you load ArcGIS API for JavaScript Modules",
   "scripts": {
@@ -7,14 +7,14 @@
     "clean": "rimraf build dist",
     "copy": "copyfiles -u 1 \"build/**/*{.d.ts,.js.map,.metadata.json}\" dist && copyfiles -f src/package.json README.md dist",
     "ngc": "ngc -p tsconfig.json",
-    "rollup": "rollup build/angular2-esri-loader.js -o dist/angular2-esri-loader.js",
+    "rollup": "rollup build/angular-esri-loader.js -o dist/angular-esri-loader.js",
     "prepublish": "npm run build",
     "preversion": "npm run test && git add README.md CHANGELOG.md",
     "test": "ngc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tomwayson/angular2-esri-loader.git"
+    "url": "git+https://github.com/tomwayson/angular-esri-loader.git"
   },
   "keywords": [
     "Angular",
@@ -24,9 +24,9 @@
   "author": "Tom Wayson <tom@tomwayson.com> (https://tomwayson.com)",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/tomwayson/angular2-esri-loader/issues"
+    "url": "https://github.com/tomwayson/angular-esri-loader/issues"
   },
-  "homepage": "https://github.com/tomwayson/angular2-esri-loader#readme",
+  "homepage": "https://github.com/tomwayson/angular-esri-loader#readme",
   "devDependencies": {
     "@angular/compiler": "^4.1.1",
     "@angular/compiler-cli": "^4.1.1",
