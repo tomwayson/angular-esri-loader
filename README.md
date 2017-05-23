@@ -86,6 +86,47 @@ export class EsriMapComponent implements OnInit {
 }
 ```
 
+### In an Angular 2 Application
+
+Example of using the loader service in a component to lazy load the ArcGIS API and create a map
+
+```ts
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+
+import { EsriLoaderService } from 'angular-esri-loader';
+
+@Component({
+  selector: 'app-esri-map',
+  templateUrl: './esri-map.component.html',
+  styleUrls: ['./esri-map.component.css']
+})
+export class EsriMapComponent implements OnInit {
+  @ViewChild('map') mapEl: ElementRef;
+  
+  map: any;
+
+  constructor(private esriLoader: EsriLoaderService) { }
+
+  ngOnInit() {
+    // only load the ArcGIS API for JavaScript when this component is loaded
+    return this.esriLoader.load({
+      // use a specific version of the API instead of the latest
+      url: '//js.arcgis.com/3.18/'
+    }).then(() => {
+      // load the map class needed to create a new map
+      this.esriLoader.loadModules(['esri/map']).then(([Map]) => {
+        // create the map at the DOM element in this component
+        this.map = new Map(this.mapEl.nativeElement, {
+          center: [-118, 34.5],
+          zoom: 8,
+          basemap: 'dark-gray'
+        });
+      });
+    });
+  }
+}
+```
+
 ### In an Angular CLI Application
 
 To use this library in an [Angular CLI](https://github.com/angular/angular-cli) application, the best place to start is to follow the instructions in [this gist](https://gist.github.com/tomwayson/e6260adfd56c2529313936528b8adacd).
