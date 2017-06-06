@@ -1,9 +1,9 @@
 # angular-esri-loader
 An [Angular](https://angular.io/) library to help you load [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/) modules. 
 
-Exposes a service that wraps the functions from the [esri-loader](https://github.com/tomwayson/esri-loader) library in new functions that return promises.
+Exposes a service that wraps the functions from the [esri-loader](https://github.com/esri/esri-loader) library in new functions that return promises.
 
-To understand why this is needed, and the benefits of using esri-loader over other techniques, see the [esri-loader README](https://github.com/tomwayson/esri-loader#why-is-this-needed).
+To understand why this is needed, and the benefits of using esri-loader over other techniques, see the [esri-loader README](https://github.com/esri/esri-loader#why-is-this-needed).
 
 ## Install
 For Angular 4 and above:
@@ -157,7 +157,7 @@ This service is in use in these applications:
 
 ## Resources
 * [Using the ArcGIS API for JavaScript in Applications built with webpack](http://tomwayson.com/2016/11/27/using-the-arcgis-api-for-javascript-in-applications-built-with-webpack/)
-* [esri-loader](https://github.com/tomwayson/esri-loader)
+* [esri-loader](https://github.com/esri/esri-loader)
 
 ## Credit
 Thanks to [@kgs916](https://github.com/kgs916) for helping me figure out how to publish a TypeScript library for Angular 2. I'll never do that again.
