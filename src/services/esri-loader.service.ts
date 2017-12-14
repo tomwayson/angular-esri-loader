@@ -12,7 +12,7 @@ export class EsriLoaderService {
   }
 
   //use to save options passed to load()
-  private loadScriptOptions: ILoadScriptOptions;
+  private loadScriptOptions: ILoadScriptOptions = {};
 
   // lazy load the ArcGIS API for JavaScript
   // only need to use load() is specifying something other than the default options
