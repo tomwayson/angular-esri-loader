@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
-import { loadModules, loadScript, ILoadScriptOptions } from 'esri-loader';
+import { isLoaded, loadModules, loadScript, ILoadScriptOptions } from 'esri-loader';
 
 @Injectable()
 export class EsriLoaderService {
 
   constructor() { }
+
+  //no longer used here, but may still be useful to other people
+  isLoaded() {
+    return isLoaded();
+  }
 
   //use to save options passed to load()
   private loadScriptOptions: ILoadScriptOptions;
