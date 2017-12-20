@@ -1,44 +1,33 @@
 import { Injectable } from '@angular/core';
-import { isLoaded, bootstrap, dojoRequire } from 'esri-loader';
+import { isLoaded, loadModules, loadScript, ILoadScriptOptions } from 'esri-loader';
 
 @Injectable()
 export class EsriLoaderService {
 
   constructor() { }
 
+  //no longer used here, but may still be useful to other people
   isLoaded() {
     return isLoaded();
   }
 
+  //use to save options passed to load()
+  private loadScriptOptions: ILoadScriptOptions = {};
+
   // lazy load the ArcGIS API for JavaScript
-  load(options?: Object): Promise<Function> {
-    return new Promise((resolve: Function, reject: Function) => {
-      // don't try to load a second time
-      if (isLoaded()) {
-        resolve(dojoRequire);
-      }
-      // wrap bootstrap in a promise
-      bootstrap((err: Error) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(dojoRequire);
-        }
-      }, options);
-    });
+  // only need to use load() is specifying something other than the default options
+  load(options?: ILoadScriptOptions): Promise<HTMLScriptElement> {
+    this.loadScriptOptions = options ? options : {};
+    return loadScript(options);
   }
 
-  // wrap Dojo require in a promise
+  // will use defaults if load() has not been called
   loadModules(moduleNames: string[]): Promise<any[]> {
-    return new Promise((resolve: Function) => {
-      dojoRequire(moduleNames, (...modules: any[]) => {
-        resolve(modules);
-      });
-    });
+    return loadModules(moduleNames, this.loadScriptOptions);
   }
 
   // convenience function to allow calling Dojo require w/ callback
-  require(moduleNames: string[], callback: Function) {
-    return dojoRequire(moduleNames, callback);
+  require(moduleNames: string[], callback: any) {
+    return loadModules(moduleNames, this.loadScriptOptions).then(callback);
   }
 }
