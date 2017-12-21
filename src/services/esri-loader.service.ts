@@ -38,7 +38,7 @@ export class EsriLoaderService {
   }
 
   // convenience function to allow calling Dojo require w/ callback
-  require(moduleNames: string[], callback: Function) {
+  require(moduleNames: string[], callback: (...modules: any[]) => void) {
     return dojoRequire(moduleNames, callback);
   }
 }
